@@ -1,0 +1,31 @@
+@import "tailwindcss";
+@import url("https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap");
+
+/* Smooth global transitions */
+* {
+  transition: background-color 0.3s ease, color 0.3s ease;
+  scroll-behavior: smooth;
+}
+
+/* Light theme background */
+body {
+  background-color: #f8fafc; /* slate-50 */
+  color: #1e293b; /* slate-800 */
+  font-family: "Sora", sans-serif;
+}
+
+/* Dark theme override */
+.dark body {
+  background-color: #0f172a; /* slate-900 */
+  color: #f1f5f9; /* slate-100 */
+}
+
+/* Custom shadows */
+.card-shadow {
+  @apply shadow-lg hover:shadow-2xl transition-shadow bg-white dark:bg-slate-800 dark:border dark:border-slate-700;
+}
+
+/* Section spacing */
+.section-padding {
+  @apply py-28 px-6;
+}
