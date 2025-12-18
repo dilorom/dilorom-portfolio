@@ -2,11 +2,12 @@ import React from "react";
 import { motion } from "framer-motion";
 import useScrollAnimation from "../../hooks/useScrollAnimation";
 
-const SectionWrapper = ({ children, className = "" }) => {
+const SectionWrapper = ({ id, children, className = "" }) => {
   const { ref, controls, animationVariants } = useScrollAnimation();
 
   return (
     <motion.section
+      id={id}
       ref={ref}
       initial="hidden"
       animate={controls}

@@ -20,7 +20,8 @@ const Contact = () => {
   };
 
   return (
-    <SectionWrapper id="contact" className="bg-gray-50 dark:bg-slate-900">
+    <SectionWrapper id="contact" className="bg-gray-50 dark:bg-slate-900 scroll-mt-20">
+
       
       <AnimatedText text="Contact Me" />
 

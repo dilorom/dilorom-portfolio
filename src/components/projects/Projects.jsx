@@ -6,13 +6,27 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const projects = [
     {
-      title: "React API Project",
+      title: "Movie App",
       description:
-        "This project uses a real-world API to fetch and display data while covering important React components and features.",
-      github: "https://github.com/dilorom",
+        "Movie App – A React-based web app to browse and search movies using the TMDB API. Features dynamic movie listings, ratings, and responsive design, showcasing modern React skills and API integration.",
+      github: "https://github.com/dilorom/Movie_app",
       demo: "", // You can fill demo URL later
     },
     // Add more projects here
+    {
+      title: "Poker Card Generator",
+      description:
+        "A fun and interactive poker card generator built with HTML, CSS, and JavaScript. It randomly displays a poker card on each page load. DOM manipulation, dynamic UI updates, and responsive front-end design.",
+      github: "https://github.com/dilorom/PokerCardGenerator",
+      demo: "", // You can fill demo URL later
+    },
+    {
+      title: "Caesar Cipher",
+      description:
+        "Caesar Cipher – A lightweight tool that encrypts and decrypts messages using the classic Caesar cipher technique,",
+      github: "https://github.com/dilorom/ceasar-cipher",
+      demo: "", // You can fill demo URL later
+    },
   ];
 
   return (

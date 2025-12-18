@@ -1,23 +1,28 @@
+// tailwind.config.js
 export default {
-  darkMode: "class",
   content: [
     "./index.html",
     "./src/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
-    container: {
-      center: true,
-      padding: "1rem",
-    },
     extend: {
-      fontFamily: {
-        sans: ["Sora", "sans-serif"],
-      },
-      colors: {
-        primary: {
-          light: "#2563eb", // blue-600
-          dark: "#60a5fa",  // blue-400
+      keyframes: {
+        glowShift: {
+          "0%": { backgroundPosition: "0% 50%" },
+          "50%": { backgroundPosition: "100% 50%" },
+          "100%": { backgroundPosition: "0% 50%" },
         },
+        glowPulse: {
+          "0%, 100%": { opacity: "0.2", transform: "scale(1)" },
+          "50%": { opacity: "0.45", transform: "scale(1.02)" },
+        },
+      },
+      animation: {
+        glowShift: "glowShift 15s linear infinite",
+        glowPulse: "glowPulse 8s ease-in-out infinite",
+      },
+      backgroundSize: {
+        "200%": "200% 200%", // important for moving gradient
       },
     },
   },

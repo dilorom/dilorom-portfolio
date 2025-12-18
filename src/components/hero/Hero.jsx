@@ -7,8 +7,8 @@ const Hero = () => {
     <section
       id="hero"
       className="
-        relative h-screen flex flex-col items-center justify-center 
-        text-center px-6 pt-32 
+        relative h-screen flex flex-col items-center justify-center
+        text-center px-6 sm:px-12 pt-32
         bg-gradient-to-b from-blue-100 to-blue-200
         dark:from-slate-800 dark:to-slate-900
         text-gray-900 dark:text-white
@@ -18,19 +18,30 @@ const Hero = () => {
       {/* Floating shapes */}
       <FloatingShapes />
 
-      {/* TITLE */}
+      {/* TITLE with Profile Image */}
       <motion.h1
-        className="text-6xl font-extrabold drop-shadow-sm leading-tight"
+        className="flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-medium drop-shadow-md gap-2"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        Hi, I’m <span className="text-blue-700 dark:text-blue-400">Dilorom</span>
+        {/* Line 1: Hi, with profile image */}
+        <div className="flex items-center gap-4">
+          <img
+            src="/profile.jpg"  /* make sure your image is in public folder */
+            alt="Dilorom"
+            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-accent-light dark:border-accent-dark object-cover"
+          />
+          <span className ="font-bold">Hello, </span><span className=" text-2xl sm:text-3xl md:text-4xl text-[#800080] dark:text-[#D8BFD8]">I’m Dilorom.</span>
+        </div>
+
+        {/* Line 2: Name */}
+        
       </motion.h1>
 
       {/* SUBTITLE */}
       <motion.p
-        className="text-xl max-w-3xl mt-4 text-gray-700 dark:text-gray-300"
+        className="text-md sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mt-4 text-gray-700 dark:text-gray-300"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 1 }}
@@ -42,10 +53,12 @@ const Hero = () => {
       {/* CTA BUTTON */}
       <motion.a
         href="#projects"
-        className="mt-10 px-8 py-3 text-lg rounded-lg shadow-lg text-white
-                   bg-blue-600 hover:bg-blue-700
-                   dark:bg-blue-500 dark:hover:bg-blue-600
-                   transition font-medium"
+        className="
+          mt-10 px-6 sm:px-8 py-3 text-md sm:text-lg rounded-lg shadow-lg text-white
+          bg-blue-500 hover:bg-[#EAB8EA]  /* hover changes to light purple */
+          dark:bg-blue-500 dark:hover:bg-[#D8BFD8]
+          transition font-medium
+        "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ delay: 0.8, duration: 1 }}

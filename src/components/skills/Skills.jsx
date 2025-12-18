@@ -10,6 +10,8 @@ import {
   FaNodeJs,
   FaGitAlt,
   FaDatabase,
+  FaPython,
+  FaBrain, // for AI / prompt engineering
 } from "react-icons/fa";
 
 const Skills = () => {
@@ -21,6 +23,8 @@ const Skills = () => {
     { icon: FaNodeJs, label: "Node.js" },
     { icon: FaGitAlt, label: "Git" },
     { icon: FaDatabase, label: "Databases" },
+    { icon: FaPython, label: "Python" },                  // Added Python
+    { icon: FaBrain, label: "Generative AI" },    // Added AI Prompt Eng.
   ];
 
   return (
