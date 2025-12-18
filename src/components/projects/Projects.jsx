@@ -23,7 +23,7 @@ const Projects = () => {
     {
       title: "Caesar Cipher",
       description:
-        "Caesar Cipher – A lightweight tool that encrypts and decrypts messages using the classic Caesar cipher technique,",
+        "Caesar Cipher – A lightweight tool that encrypts and decrypts messages using the classic Caesar cipher technique.",
       github: "https://github.com/dilorom/ceasar-cipher",
       demo: "", // You can fill demo URL later
     },
