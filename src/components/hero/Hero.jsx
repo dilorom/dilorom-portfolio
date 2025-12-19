@@ -28,7 +28,7 @@ const Hero = () => {
         {/* Line 1: Hi, with profile image */}
         <div className="flex items-center gap-4">
           <img
-            src="/profile.jpg"  /* make sure your image is in public folder */
+            src="/dilorom-portfolio/profile.jpg"  /* make sure your image is in public folder */
             alt="Dilorom"
             className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-accent-light dark:border-accent-dark object-cover"
           />

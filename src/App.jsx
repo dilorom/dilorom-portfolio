@@ -6,6 +6,7 @@ import Skills from "./components/skills/Skills";
 import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
+import { Toaster } from "react-hot-toast";
 
 function App() {
   useEffect(() => {
@@ -27,6 +28,18 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+
+      {/* Global Toaster for toast notifications */}
+      <Toaster position="top-right" reverseOrder={false} />
+
+      {/* Hide reCAPTCHA badge globally */}
+      <style>
+        {`
+          .grecaptcha-badge {
+            display: none !important;
+          }
+        `}
+      </style>
     </div>
   );
 }
