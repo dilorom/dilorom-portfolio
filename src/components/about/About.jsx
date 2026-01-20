@@ -29,9 +29,6 @@ const About = () => {
             <p>
               Outside of work, I enjoy exploring the great outdoors — I’m an experienced hiker and love trekking through high mountains with breathtaking scenery. I’m also passionate about video editing and capturing amazing photographs.
             </p>
-            <p>
-              Fun fact: I’ve completed a few sewing projects that I’m really proud of, which shows my love for creativity in all forms.
-            </p>
           </div>
         </div>
       </div>

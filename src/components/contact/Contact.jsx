@@ -1,10 +1,9 @@
-import React, { useState, useRef } from "react";
+import React, { useState } from "react";
 import emailjs from "@emailjs/browser";
 import SectionWrapper from "../ui/SectionWrapper";
 import AnimatedText from "../ui/AnimatedText";
 import { FaSpinner } from "react-icons/fa";
 import toast from "react-hot-toast";
-import ReCAPTCHA from "react-google-recaptcha";
 
 const Contact = () => {
   const [form, setForm] = useState({
@@ -15,7 +14,7 @@ const Contact = () => {
   });
 
   const [loading, setLoading] = useState(false);
-  const recaptchaRef = useRef(null);
+  const [lastSent, setLastSent] = useState(0);
 
   const handleChange = (e) => {
     setForm({ ...form, [e.target.name]: e.target.value });
@@ -36,38 +35,36 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
 
-    // Honeypot spam protection
+    // 🛑 Honeypot protection
     if (form.website) return;
+
+    // ⏱ Simple cooldown (30s)
+    if (Date.now() - lastSent < 30000) {
+      toast.error("Please wait a moment before sending again.");
+      return;
+    }
 
     if (!validateForm()) return;
 
     setLoading(true);
 
     try {
-      // Execute invisible reCAPTCHA
-      const recaptchaValue = await recaptchaRef.current.executeAsync();
-      recaptchaRef.current.reset();
-
-      if (!recaptchaValue) {
-        toast.error("Please complete the CAPTCHA.");
-        setLoading(false);
-        return;
-      }
-
-      // Send email
+      // 🔹 reCAPTCHA token request (handled by EmailJS automatically)
       await emailjs.send(
-        "service_f4uveej",  // Your Service ID
-        "template_5wo4uie", // Your Template ID
+        "service_f4uveej",      // Service ID
+        "template_5wo4uie",     // Template ID
         {
           from_name: form.name,
           reply_to: form.email,
           message: form.message,
         },
-        "zGGobHW0GEs2iaSRh" // Your Public Key
+        "zGGobHW0GEs2iaSRh"     // Public Key (reCAPTCHA-enabled in EmailJS dashboard)
       );
 
-      toast.success("Message sent successfully!");
+      toast.success("Message sent successfully ✨");
+      setLastSent(Date.now());
       setForm({ name: "", email: "", message: "", website: "" });
+
     } catch (error) {
       console.error(error);
       toast.error("Something went wrong. Please try again.");
@@ -101,8 +98,8 @@ const Contact = () => {
           placeholder="Your Name"
           value={form.name}
           onChange={handleChange}
-          required
           className="p-4 rounded-lg border dark:bg-slate-800"
+          required
         />
 
         <input
@@ -111,8 +108,8 @@ const Contact = () => {
           placeholder="Your Email"
           value={form.email}
           onChange={handleChange}
-          required
           className="p-4 rounded-lg border dark:bg-slate-800"
+          required
         />
 
         <textarea
@@ -121,27 +118,24 @@ const Contact = () => {
           value={form.message}
           onChange={handleChange}
           rows={6}
-          required
           className="p-4 rounded-lg border dark:bg-slate-800"
+          required
         />
 
-        {/* Invisible reCAPTCHA */}
-        <ReCAPTCHA
-          sitekey="6LcYBTEsAAAAAGEMF3iWuQJJbq_md6toNba3jhR2"
-          size="invisible"
-          ref={recaptchaRef}
-        />
-
-        <button type="submit" disabled={loading} className="px-6 py-3 bg-blue-600 text-white rounded-lg mx-auto flex items-center gap-2">
+        <button
+          type="submit"
+          disabled={loading}
+          className="px-6 py-3 bg-blue-600 text-white rounded-lg mx-auto flex items-center gap-2 hover:bg-blue-700 transition"
+        >
           {loading ? (
             <>
-            <FaSpinner className="animate-spin" /> Sending...
+              <FaSpinner className="animate-spin" />
+              Sending...
             </>
-            ) : (
+          ) : (
             "Send Message"
-            )}
+          )}
         </button>
-
       </form>
     </SectionWrapper>
   );
