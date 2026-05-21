@@ -1,45 +1,85 @@
 import React from "react";
 import { motion } from "framer-motion";
-import { FaGithub, FaExternalLinkAlt } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 
-const ProjectCard = ({ title, description, github, demo }) => {
+const ProjectCard = ({
+  title,
+  description,
+  github,
+  demo,
+  image,
+}) => {
   return (
-    <motion.div
+    <motion.a
+      href={demo || github}
+      target="_blank"
+      rel="noopener noreferrer"
       whileHover={{ y: -5, scale: 1.02 }}
       className="
-        card-shadow p-6 rounded-xl flex flex-col justify-between
+        relative
+        rounded-xl
+        overflow-hidden
+        min-h-[350px]
+        flex
+        flex-col
+        justify-between
+        p-6
+        text-white
+        backdrop-blur-lg
+        border border-white/10
+        shadow-2xl
+        hover:shadow-blue-500/20
+        transition
+        cursor-pointer
       "
     >
-      <div>
-        <h3 className="text-xl font-semibold text-gray-900 dark:text-white mb-2">
-          {title}
-        </h3>
-        <p className="text-gray-700 dark:text-gray-300 text-sm leading-relaxed">
-          {description}
-        </p>
-      </div>
+      {/* Background Image */}
+      <div
+        className="
+          absolute inset-0
+          bg-cover bg-center
+          scale-110
+          blur-[1px]
+        "
+        style={{
+          backgroundImage: `url(${image})`,
+        }}
+      />
 
-      <div className="mt-4 flex gap-4">
-        <a
-          href={github}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition text-2xl"
-        >
-          <FaGithub />
-        </a>
-        {demo && (
+      {/* Dark Overlay */}
+      <div className="absolute inset-0 bg-black/60" />
+
+      {/* Content */}
+      <div className="relative z-10 flex flex-col justify-between h-full">
+        <div>
+          <h3 className="text-xl font-semibold text-white mb-2">
+            {title}
+          </h3>
+
+          <p className="text-gray-200 text-sm leading-relaxed">
+            {description}
+          </p>
+        </div>
+
+        {/* GitHub Link */}
+        <div className="mt-4 flex gap-4">
           <a
-            href={demo}
+            href={github}
             target="_blank"
             rel="noopener noreferrer"
-            className="text-gray-700 dark:text-gray-200 hover:text-blue-600 dark:hover:text-blue-400 transition text-2xl"
+            onClick={(e) => e.stopPropagation()}
+            className="
+              text-white
+              hover:text-blue-400
+              transition
+              text-2xl
+            "
           >
-            <FaExternalLinkAlt />
+            <FaGithub />
           </a>
-        )}
+        </div>
       </div>
-    </motion.div>
+    </motion.a>
   );
 };
 

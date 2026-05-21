@@ -10,22 +10,34 @@ const Projects = () => {
       description:
         "Movie App – A React-based web app to browse and search movies using the TMDB API. Features dynamic movie listings, ratings, and responsive design, showcasing modern React skills and API integration.",
       github: "https://github.com/dilorom/Movie_app",
-      demo: "", // You can fill demo URL later
+      demo: "https://dilorom.github.io/Movie_app/", 
+      image:"public/movie.jpg"
     },
-    // Add more projects here
     {
       title: "Poker Card Generator",
       description:
-        "A fun and interactive poker card generator built with HTML, CSS, and JavaScript. It randomly displays a poker card on each page load. DOM manipulation, dynamic UI updates, and responsive front-end design.",
-      github: "https://github.com/dilorom/PokerCardGenerator",
-      demo: "", // You can fill demo URL later
+        "Poker Card Generator – A fun and interactive poker card generator built with HTML, CSS, and JavaScript. It randomly displays a poker card on each page load. DOM manipulation, dynamic UI updates, and responsive front-end design.",
+      github: "https://github.com/dilorom/Movie_app",
+      demo: "https://dilorom.github.io/Movie_app/", 
+      image:"public/poker.jpg"
     },
+    {
+      title: "GoDrive",
+      description:
+        "GoDrive – GoDrive is a cloud storage web application that allows users to securely upload, organize, and access files from anywhere. It features a clean, responsive interface designed for smooth navigation and efficient file management, showcasing strong skills in frontend development, API integration, and user-centered design.",
+      github: "https://github.com/dilorom/godrive",
+      demo: "https://dilorom.github.io/godrive/", 
+      image:"Godrive.jpg"
+    },
+    // Add more projects here
+    
     {
       title: "Caesar Cipher",
       description:
         "Caesar Cipher – A lightweight tool that encrypts and decrypts messages using the classic Caesar cipher technique.",
       github: "https://github.com/dilorom/ceasar-cipher",
-      demo: "", // You can fill demo URL later
+      demo: "https://dilorom.github.io/Movie_app/",
+      image: "pibluc/movie.jpg"
     },
   ];
 
