@@ -4,7 +4,8 @@ import AnimatedText from "../ui/AnimatedText";
 
 const About = () => {
   return (
-    <SectionWrapper id="about" className="bg-white dark:bg-slate-900">
+    /* Main wrapper updated to maintain dark background regardless of system settings */
+    <SectionWrapper id="about" className="bg-slate-900 dark:bg-slate-900">
       {/* About Me Section */}
       <AnimatedText text="About Me" />
 
@@ -13,11 +14,13 @@ const About = () => {
           <div
             className="
               relative z-10 rounded-2xl
-              bg-white/90 dark:bg-slate-800/90
+              /* Card background updated to prevent turning white on mobile devices */
+              bg-slate-800/90 dark:bg-slate-800/90
               px-8 py-8
               text-center text-lg
               leading-relaxed
-              text-gray-800 dark:text-gray-200
+              /* Text color updated to keep contrast high across all devices */
+              text-gray-200 dark:text-gray-200
               shadow-lg
               space-y-4
             "
@@ -42,18 +45,20 @@ const About = () => {
           <div
             className="
               relative z-10 rounded-2xl
-              bg-white/90 dark:bg-slate-800/90
+              /* Card background updated to prevent turning white on mobile devices */
+              bg-slate-800/90 dark:bg-slate-800/90
               px-8 py-8
               text-center text-lg
               leading-relaxed
-              text-gray-800 dark:text-gray-200
+              /* Text color updated to keep contrast high across all devices */
+              text-gray-200 dark:text-gray-200
               shadow-lg
               space-y-2
             "
           >
             <p>Master's and Bachelor's Degree in Information Security</p>
             <p>
-               <a href="https://tuit.uz/en" target="_blank" rel="noopener noreferrer" className="text-blue-600 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300 transition-colors">
+               <a href="https://tuit.uz/en" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 underline hover:text-blue-300 dark:hover:text-blue-300 transition-colors">
           Tashkent University of Information Technologies </a>
 
             </p>
