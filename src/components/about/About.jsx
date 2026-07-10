@@ -4,8 +4,8 @@ import AnimatedText from "../ui/AnimatedText";
 
 const About = () => {
   return (
-    /* Main wrapper updated to maintain dark background regardless of system settings */
-    <SectionWrapper id="about" className="bg-slate-900 dark:bg-slate-900">
+    /* The ! modifier forces the background to stay dark on mobile, bypassing any light-mode overrides */
+    <SectionWrapper id="about" className="!bg-slate-950 dark:!bg-slate-950">
       {/* About Me Section */}
       <AnimatedText text="About Me" />
 
@@ -14,13 +14,13 @@ const About = () => {
           <div
             className="
               relative z-10 rounded-2xl
-              /* Card background updated to prevent turning white on mobile devices */
-              bg-slate-800/90 dark:bg-slate-800/90
+              /* Forced the inner card background to remain dark slate on mobile */
+              !bg-slate-900/90 dark:!bg-slate-900/90
               px-8 py-8
               text-center text-lg
               leading-relaxed
-              /* Text color updated to keep contrast high across all devices */
-              text-gray-200 dark:text-gray-200
+              /* Forced the text to stay light so it reads perfectly on mobile */
+              !text-gray-200 dark:!text-gray-200
               shadow-lg
               space-y-4
             "
@@ -45,22 +45,21 @@ const About = () => {
           <div
             className="
               relative z-10 rounded-2xl
-              /* Card background updated to prevent turning white on mobile devices */
-              bg-slate-800/90 dark:bg-slate-800/90
+              /* Forced the inner card background to remain dark slate on mobile */
+              !bg-slate-900/90 dark:!bg-slate-900/90
               px-8 py-8
               text-center text-lg
               leading-relaxed
-              /* Text color updated to keep contrast high across all devices */
-              text-gray-200 dark:text-gray-200
+              /* Forced the text to stay light so it reads perfectly on mobile */
+              !text-gray-200 dark:!text-gray-200
               shadow-lg
               space-y-2
             "
           >
             <p>Master's and Bachelor's Degree in Information Security</p>
             <p>
-               <a href="https://tuit.uz/en" target="_blank" rel="noopener noreferrer" className="text-blue-400 dark:text-blue-400 underline hover:text-blue-300 dark:hover:text-blue-300 transition-colors">
-          Tashkent University of Information Technologies </a>
-
+               <a href="https://tuit.uz/en" target="_blank" rel="noopener noreferrer" className="text-cyan-400 dark:text-cyan-400 underline hover:text-cyan-300 transition-colors">
+               Tashkent University of Information Technologies </a>
             </p>
           </div>
         </div>
