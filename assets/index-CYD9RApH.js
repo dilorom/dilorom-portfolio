@@ -20,25 +20,29 @@ Error generating stack: `+e.message+`
           transition-all duration-300 ease-in-out
           border-cyan-500/30 text-cyan-400 
           hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]
-        `,initial:{opacity:0},animate:{opacity:1},transition:{delay:.8,duration:1},children:`View My Work`})]});function ou(){let e=(0,S.useRef)(null),t=J(),n=zl(e,{once:!0,margin:`-100px`});return(0,S.useEffect)(()=>{n&&t.start(`visible`)},[n,t]),{ref:e,controls:t,animationVariants:{hidden:{opacity:0,y:50},visible:{opacity:1,y:0}}}}var su=({id:e,children:t,className:n=``})=>{let{ref:r,controls:i,animationVariants:a}=ou();return(0,R.jsx)(Fl.section,{id:e,ref:r,initial:`hidden`,animate:i,variants:a,transition:{duration:.8},className:`section-padding ${n}`,children:t})},cu=({text:e,className:t=``})=>(0,R.jsxs)(`div`,{className:`flex flex-col items-center justify-center mb-12 select-none`,children:[(0,R.jsx)(Fl.h4,{initial:{opacity:0,y:15},whileInView:{opacity:1,y:0},transition:{duration:.6,ease:`easeOut`},viewport:{once:!0},className:`text-3xl md:text-4xl font-light tracking-wide text-center text-gray-100 ${t}`,children:e}),(0,R.jsx)(Fl.div,{initial:{width:0,opacity:0},whileInView:{width:`160px`,opacity:1},transition:{delay:.2,duration:.8,ease:`easeOut`},viewport:{once:!0},className:`h-[1.5px] mt-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.6)]`})]}),lu=()=>(0,R.jsxs)(su,{id:`about`,className:`bg-white dark:bg-slate-900`,children:[(0,R.jsx)(cu,{text:`About Me`}),(0,R.jsx)(`div`,{className:`max-w-3xl mx-auto mt-12`,children:(0,R.jsx)(`div`,{className:`glow-card rounded-2xl p-[0.1px]`,children:(0,R.jsxs)(`div`,{className:`
+        `,initial:{opacity:0},animate:{opacity:1},transition:{delay:.8,duration:1},children:`View My Work`})]});function ou(){let e=(0,S.useRef)(null),t=J(),n=zl(e,{once:!0,margin:`-100px`});return(0,S.useEffect)(()=>{n&&t.start(`visible`)},[n,t]),{ref:e,controls:t,animationVariants:{hidden:{opacity:0,y:50},visible:{opacity:1,y:0}}}}var su=({id:e,children:t,className:n=``})=>{let{ref:r,controls:i,animationVariants:a}=ou();return(0,R.jsx)(Fl.section,{id:e,ref:r,initial:`hidden`,animate:i,variants:a,transition:{duration:.8},className:`section-padding ${n}`,children:t})},cu=({text:e,className:t=``})=>(0,R.jsxs)(`div`,{className:`flex flex-col items-center justify-center mb-12 select-none`,children:[(0,R.jsx)(Fl.h4,{initial:{opacity:0,y:15},whileInView:{opacity:1,y:0},transition:{duration:.6,ease:`easeOut`},viewport:{once:!0},className:`text-3xl md:text-4xl font-light tracking-wide text-center text-gray-100 ${t}`,children:e}),(0,R.jsx)(Fl.div,{initial:{width:0,opacity:0},whileInView:{width:`160px`,opacity:1},transition:{delay:.2,duration:.8,ease:`easeOut`},viewport:{once:!0},className:`h-[1.5px] mt-3 rounded-full bg-cyan-400 shadow-[0_0_10px_rgba(34,211,238,0.6)]`})]}),lu=()=>(0,R.jsxs)(su,{id:`about`,className:`bg-slate-900 dark:bg-slate-900`,children:[(0,R.jsx)(cu,{text:`About Me`}),(0,R.jsx)(`div`,{className:`max-w-3xl mx-auto mt-12`,children:(0,R.jsx)(`div`,{className:`glow-card rounded-2xl p-[0.1px]`,children:(0,R.jsxs)(`div`,{className:`
               relative z-10 rounded-2xl
-              bg-white/90 dark:bg-slate-800/90
+              /* Card background updated to prevent turning white on mobile devices */
+              bg-slate-800/90 dark:bg-slate-800/90
               px-8 py-8
               text-center text-lg
               leading-relaxed
-              text-gray-800 dark:text-gray-200
+              /* Text color updated to keep contrast high across all devices */
+              text-gray-200 dark:text-gray-200
               shadow-lg
               space-y-4
             `,children:[(0,R.jsx)(`p`,{children:`I am a Web & Software Developer and IT Specialist with a strong background in cybersecurity, academic research, and software engineering. I combine technical expertise with creative problem-solving to deliver secure, intuitive, and visually engaging digital solutions.`}),(0,R.jsx)(`p`,{children:`Outside of work, I enjoy exploring the great outdoors — I’m an experienced hiker and love trekking through high mountains with breathtaking scenery. I’m also passionate about video editing and capturing amazing photographs.`})]})})}),(0,R.jsx)(`br`,{}),(0,R.jsx)(cu,{text:`Education`}),(0,R.jsx)(`div`,{className:`max-w-3xl mx-auto mt-12`,children:(0,R.jsx)(`div`,{className:`glow-card rounded-2xl p-[0.1px]`,children:(0,R.jsxs)(`div`,{className:`
               relative z-10 rounded-2xl
-              bg-white/90 dark:bg-slate-800/90
+              /* Card background updated to prevent turning white on mobile devices */
+              bg-slate-800/90 dark:bg-slate-800/90
               px-8 py-8
               text-center text-lg
               leading-relaxed
-              text-gray-800 dark:text-gray-200
+              /* Text color updated to keep contrast high across all devices */
+              text-gray-200 dark:text-gray-200
               shadow-lg
               space-y-2
-            `,children:[(0,R.jsx)(`p`,{children:`Master's and Bachelor's Degree in Information Security`}),(0,R.jsx)(`p`,{children:(0,R.jsx)(`a`,{href:`https://tuit.uz/en`,target:`_blank`,rel:`noopener noreferrer`,className:`text-blue-600 dark:text-blue-400 underline hover:text-blue-500 dark:hover:text-blue-300 transition-colors`,children:`Tashkent University of Information Technologies `})})]})})})]}),uu=({icon:e,label:t,glowStyles:n,isPython:r})=>(0,R.jsxs)(Fl.div,{whileHover:{scale:1.05,y:-5},transition:{duration:.2},className:`
+            `,children:[(0,R.jsx)(`p`,{children:`Master's and Bachelor's Degree in Information Security`}),(0,R.jsx)(`p`,{children:(0,R.jsx)(`a`,{href:`https://tuit.uz/en`,target:`_blank`,rel:`noopener noreferrer`,className:`text-blue-400 dark:text-blue-400 underline hover:text-blue-300 dark:hover:text-blue-300 transition-colors`,children:`Tashkent University of Information Technologies `})})]})})})]}),uu=({icon:e,label:t,glowStyles:n,isPython:r})=>(0,R.jsxs)(Fl.div,{whileHover:{scale:1.05,y:-5},transition:{duration:.2},className:`
         flex flex-col items-center justify-center p-6 
         bg-slate-900/40 backdrop-blur-sm
         rounded-xl border-2
