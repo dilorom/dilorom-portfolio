@@ -9,7 +9,7 @@ const About = () => {
       <AnimatedText text="About Me" />
 
       <div className="max-w-3xl mx-auto mt-12">
-        <div className="glow-card rounded-2xl p-[2px]">
+        <div className="glow-card rounded-2xl p-[0.1px]">
           <div
             className="
               relative z-10 rounded-2xl
@@ -23,7 +23,7 @@ const About = () => {
             "
           >
             <p>
-              I am a Web Designer, IT Specialist, and Software Developer with a strong background in cybersecurity, academic research, and software engineering.
+              I am a Web & Software Developer and IT Specialist with a strong background in cybersecurity, academic research, and software engineering.
               I combine technical expertise with creative problem-solving to deliver secure, intuitive, and visually engaging digital solutions.
             </p>
             <p>
@@ -38,7 +38,7 @@ const About = () => {
       <AnimatedText text="Education" />
 
       <div className="max-w-3xl mx-auto mt-12">
-        <div className="glow-card rounded-2xl p-[2px]">
+        <div className="glow-card rounded-2xl p-[0.1px]">
           <div
             className="
               relative z-10 rounded-2xl

@@ -9,55 +9,60 @@ const Hero = () => {
       className="
         relative h-screen flex flex-col items-center justify-center
         text-center px-6 sm:px-12 pt-32
-        bg-gradient-to-b from-blue-100 to-blue-200
-        dark:from-slate-800 dark:to-slate-900
-        text-gray-900 dark:text-white
+        bg-slate-950 text-white
         overflow-hidden
       "
     >
-      {/* Floating shapes */}
+      {/* Floating neon background shapes */}
       <FloatingShapes />
 
       {/* TITLE with Profile Image */}
       <motion.h1
-        className="flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-medium drop-shadow-md gap-2"
+        className="relative z-10 flex flex-col items-center justify-center text-4xl sm:text-5xl md:text-6xl font-light tracking-wide drop-shadow-md gap-4"
         initial={{ opacity: 0, y: -30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 1 }}
       >
-        {/* Line 1: Hi, with profile image */}
-        <div className="flex items-center gap-4">
-          <img
-            src="/dilorom-portfolio/profile.jpg"  /* make sure your image is in public folder */
-            alt="Dilorom"
-            className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-accent-light dark:border-accent-dark object-cover"
-          />
-          <span className ="font-bold">Hello, </span><span className=" text-2xl sm:text-3xl md:text-4xl text-[#800080] dark:text-[#D8BFD8]">I’m Dilorom.</span>
+        {/* Row 1: Image next to Hello */}
+        <div className="flex items-center gap-4 sm:gap-6 font-light text-gray-200">
+          <div className="relative">
+            <img
+              src="/dilorom-portfolio/profile.jpg"  /* make sure your image is in public folder */
+              alt="Dilorom"
+              className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-cyan-500/40 shadow-[0_0_20px_rgba(34,211,238,0.2)] object-cover"
+            />
+          </div>
+          <span className="text-4xl sm:text-5xl md:text-6xl opacity-90 font-bold">Hello,</span>
         </div>
-
-        {/* Line 2: Name */}
         
+        {/* Row 2: Name on its own line directly below */}
+        <div className="flex justify-center w-full">
+          <span className="text-3xl sm:text-4xl md:text-5xl text-cyan-400 font-normal mt-2 drop-shadow-[0_0_12px_rgba(34,211,238,0.35)]">
+            I’m *Dilorom*,
+          </span>
+        </div>
       </motion.h1>
 
       {/* SUBTITLE */}
       <motion.p
-        className="text-md sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mt-4 text-gray-700 dark:text-gray-300"
+        className="relative z-10 text-md sm:text-lg md:text-xl max-w-xl sm:max-w-2xl mt-8 text-gray-400 font-light tracking-wide leading-relaxed"
         initial={{ opacity: 0, y: 30 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ delay: 0.4, duration: 1 }}
       >
-        IT Specialist & Software Developer crafting secure, user-centered, and
-        beautifully designed digital experiences with modern technologies.
+        Web & Software Developer building secure, intuitive, and visually engaging digital experiences using modern technologies.
       </motion.p>
 
       {/* CTA BUTTON */}
       <motion.a
         href="#projects"
         className="
-          mt-10 px-6 sm:px-8 py-3 text-md sm:text-lg rounded-lg shadow-lg text-white
-          bg-blue-500 hover:bg-[#EAB8EA]  /* hover changes to light purple */
-          dark:bg-blue-500 dark:hover:bg-[#D8BFD8]
-          transition font-medium
+          relative z-10
+          mt-10 px-8 py-3 text-sm sm:text-base font-semibold tracking-wide rounded-full
+          border-2 bg-slate-900/50 
+          transition-all duration-300 ease-in-out
+          border-cyan-500/30 text-cyan-400 
+          hover:border-cyan-400 hover:shadow-[0_0_15px_rgba(34,211,238,0.4)]
         "
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}

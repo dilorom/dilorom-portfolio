@@ -8,6 +8,7 @@ const ProjectCard = ({
   github,
   demo,
   image,
+  glowStyles, 
 }) => {
   return (
     <motion.a
@@ -15,7 +16,7 @@ const ProjectCard = ({
       target="_blank"
       rel="noopener noreferrer"
       whileHover={{ y: -5, scale: 1.02 }}
-      className="
+      className={`
         relative
         rounded-xl
         overflow-hidden
@@ -24,14 +25,13 @@ const ProjectCard = ({
         flex-col
         justify-between
         p-6
-        text-white
         backdrop-blur-lg
-        border border-white/10
-        shadow-2xl
-        hover:shadow-blue-500/20
-        transition
+        border-2
+        transition-all
+        duration-300
         cursor-pointer
-      "
+        ${glowStyles} 
+      `}
     >
       {/* Background Image */}
       <div
@@ -52,8 +52,11 @@ const ProjectCard = ({
       {/* Content */}
       <div className="relative z-10 flex flex-col justify-between h-full">
         <div>
-          <h3 className="text-xl font-semibold text-white mb-2">
-            {title}
+          {/* The <h3> uses the inherited neon text color for its underline, 
+            while the <span> inside keeps the actual text crisp white.
+          */}
+          <h3 className="text-xl font-semibold mb-3 underline decoration-current decoration-2 underline-offset-4">
+            <span className="text-white">{title}</span>
           </h3>
 
           <p className="text-gray-200 text-sm leading-relaxed">
@@ -69,10 +72,15 @@ const ProjectCard = ({
             rel="noopener noreferrer"
             onClick={(e) => e.stopPropagation()}
             className="
+              w-10 h-10 
+              flex items-center justify-center 
+              rounded-full border border-current 
+              bg-slate-950/60 
+              text-lg
               text-white
-              hover:text-blue-400
-              transition
-              text-2xl
+              hover:bg-slate-950
+              transition-colors
+              duration-300
             "
           >
             <FaGithub />

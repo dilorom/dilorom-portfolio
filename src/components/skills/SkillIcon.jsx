@@ -1,17 +1,26 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const SkillIcon = ({ icon: Icon, label }) => {
+const SkillIcon = ({ icon: Icon, label, glowStyles, isPython }) => {
   return (
     <motion.div
-      whileHover={{ scale: 1.1, y: -5 }}
-      className="
-        flex flex-col items-center justify-center p-4 bg-white dark:bg-slate-800
-        rounded-xl shadow-lg hover:shadow-2xl transition
-      "
+      whileHover={{ scale: 1.05, y: -5 }}
+      transition={{ duration: 0.2 }}
+      className={`
+        flex flex-col items-center justify-center p-6 
+        bg-slate-900/40 backdrop-blur-sm
+        rounded-xl border-2
+        transition-all duration-300
+        ${glowStyles}
+      `}
     >
-      <Icon className="text-4xl text-blue-600 dark:text-blue-400 mb-2" />
-      <span className="text-gray-700 dark:text-gray-200 font-medium">{label}</span>
+      {/* If it's Python, apply amber/yellow text color, otherwise inherit the default glow style color */}
+      <Icon 
+        className={`text-5xl mb-3 transition-transform duration-300 ${
+          isPython ? "text-amber-300" : ""
+        }`} 
+      />
+      <span className="text-white font-medium text-sm tracking-wide">{label}</span>
     </motion.div>
   );
 };

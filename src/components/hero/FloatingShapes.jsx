@@ -4,9 +4,9 @@ import { motion } from "framer-motion";
 const FloatingShapes = () => {
   return (
     <div className="absolute inset-0 overflow-hidden pointer-events-none">
-      {/* Shape 1 */}
+      {/* Shape 1: Neon Cyan */}
       <motion.div
-        className="absolute w-80 h-80 bg-blue-300/40 dark:bg-blue-500/30 rounded-full blur-3xl"
+        className="absolute w-80 h-80 bg-cyan-500/20 rounded-full blur-3xl"
         initial={{ x: -100, y: -80 }}
         animate={{ x: 100, y: 40 }}
         transition={{
@@ -16,9 +16,9 @@ const FloatingShapes = () => {
         }}
       />
 
-      {/* Shape 2 */}
+      {/* Shape 2: Neon Purple */}
       <motion.div
-        className="absolute w-72 h-72 bg-purple-300/40 dark:bg-purple-500/30 rounded-full blur-3xl"
+        className="absolute w-72 h-72 bg-purple-500/20 rounded-full blur-3xl"
         initial={{ x: 150, y: 100 }}
         animate={{ x: -60, y: 20 }}
         transition={{
@@ -28,9 +28,9 @@ const FloatingShapes = () => {
         }}
       />
 
-      {/* Shape 3 */}
+      {/* Shape 3: Neon Pink */}
       <motion.div
-        className="absolute w-96 h-96 bg-pink-300/30 dark:bg-pink-500/30 rounded-full blur-3xl"
+        className="absolute w-96 h-96 bg-pink-500/10 rounded-full blur-3xl"
         initial={{ x: 60, y: 200 }}
         animate={{ x: 0, y: 120 }}
         transition={{
