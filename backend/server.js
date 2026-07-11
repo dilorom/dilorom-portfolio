@@ -9,7 +9,7 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// 1. FIXED: Point OpenAI client directly to Groq's free endpoint
+// 1. Point OpenAI client directly to Groq's free endpoint
 const openai = new OpenAI({
   apiKey: process.env.GROQ_API_KEY,
   baseURL: "https://api.groq.com/openai/v1", 
@@ -38,17 +38,17 @@ Here are examples of jokes you can tell or use for inspiration:
 `;
 
 app.post("/api/chat", async (req, res) => {
-  // 1. Grab the full conversation history array from the frontend body
+  // Grab the full conversation history array from the frontend body
   const { messages } = req.body;
 
   try {
-    // 2. Map the frontend messages into the standard format OpenAI/Groq expects
+    // Map the frontend messages into the standard format OpenAI/Groq expects
     const formattedMessages = messages.map(msg => ({
       role: msg.role,
       content: msg.content
     }));
 
-    // 3. Request a chat completion, inserting the system rules at index 0
+    // Request a chat completion, inserting the system rules at index 0
     const completion = await openai.chat.completions.create({
       model: "llama-3.1-8b-instant",
       messages: [
@@ -66,6 +66,10 @@ app.post("/api/chat", async (req, res) => {
   }
 });
 
-app.listen(5000, "127.0.0.1", () => {
-  console.log("🚀 D21 Server is running completely free on http://127.0.0.1:5000 via Groq!");
+// FIXED: Dynamic port allocation for Render production environments
+const PORT = process.env.PORT || 5000;
+
+// FIXED: Listen on 0.0.0.0 instead of 127.0.0.1 to clear Render port scan errors
+app.listen(PORT, "0.0.0.0", () => {
+  console.log(`🚀 D21 Server is running completely free on port ${PORT} via Groq!`);
 });
