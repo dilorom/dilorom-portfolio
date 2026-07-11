@@ -27,7 +27,7 @@ const Hero = () => {
         <div className="flex items-center gap-4 sm:gap-6 font-light text-gray-200">
           <div className="relative">
             <img
-              src="/dilorom-portfolio/profile.jpg"  /* make sure your image is in public folder */
+              src="/dilorom-portfolio/profile.webp"  /* make sure your image is in public folder */
               alt="Dilorom"
               className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 rounded-full border-2 border-cyan-500/40 shadow-[0_0_20px_rgba(34,211,238,0.2)] object-cover"
             />

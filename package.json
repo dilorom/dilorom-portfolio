@@ -14,7 +14,12 @@
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
+    "@google/genai": "^2.11.0",
+    "cors": "^2.8.6",
+    "dotenv": "^17.4.2",
+    "express": "^5.2.1",
     "framer-motion": "^12.23.24",
+    "openai": "^6.46.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
     "react-hot-toast": "^2.6.0",

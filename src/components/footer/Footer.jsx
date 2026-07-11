@@ -23,11 +23,11 @@ const Footer = () => {
       icon: <FaGlobe />,
       styles: "border-amber-500/30 text-amber-400 hover:border-amber-400 hover:shadow-[0_0_15px_rgba(251,191,36,0.4)]",
     },
-    {
+    /*{
       href: "https://telegram.me",
       icon: <FaPaperPlane />,
       styles: "border-emerald-500/30 text-emerald-400 hover:border-emerald-400 hover:shadow-[0_0_15px_rgba(52,211,153,0.4)]",
-    },
+    },*/
   ];
 
   return (

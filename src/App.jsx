@@ -7,6 +7,7 @@ import Projects from "./components/projects/Projects";
 import Contact from "./components/contact/Contact";
 import Footer from "./components/footer/Footer";
 import { Toaster } from "react-hot-toast";
+import AIAssistant from "./components/AIAssistant";
 
 function App() {
   useEffect(() => {
@@ -28,6 +29,7 @@ function App() {
       <Projects />
       <Contact />
       <Footer />
+      <AIAssistant />
 
       {/* Global Toaster for toast notifications */}
       <Toaster position="top-right" reverseOrder={false} />
