@@ -19,7 +19,7 @@
     "lint": "eslint .",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d dist",
-    "server": "node server.js" 
+    "server": "node backend/server.js" 
   },
   "dependencies": {
     "@emailjs/browser": "^4.4.1",
