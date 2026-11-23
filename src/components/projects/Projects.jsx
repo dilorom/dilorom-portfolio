@@ -6,12 +6,23 @@ import ProjectCard from "./ProjectCard";
 const Projects = () => {
   const projects = [
     {
+      title: "Football Performance Dashboard",
+      description:
+        "Football Performance Dashboard – A coach-facing analytics app for player development and opposition scouting, built with Python, Streamlit, pandas, Plotly and SQLite on FIFA World Cup 2022 StatsBomb data. Features squad xG tables, player trend charts, opposition shot maps and SQL leaderboards, with pytest tests, Docker and GitHub Actions CI.",
+      github: "https://github.com/dilorom/football-dashboard",
+      demo: "https://football-dashboard-dilorom.streamlit.app/",
+      image: "football.png",
+      // Emerald Glow Theme
+      glowStyles: "border-emerald-500/20 hover:border-emerald-400 hover:shadow-[0_0_20px_rgba(52,211,153,0.25)] text-emerald-400"
+    
+    },
+    {
       title: "Movie App",
       description:
         "Movie App – A React-based web app to browse and search movies using the TMDB API. Features dynamic movie listings, ratings, and responsive design, showcasing modern React skills and API integration.",
       github: "https://github.com/dilorom/Movie_app",
       demo: "https://dilorom.github.io/Movie_app/", 
-      image: "public/movie.webp",
+      image: "movie.webp",
       // Cyan Glow Theme
       glowStyles: "border-cyan-500/20 hover:border-cyan-400 hover:shadow-[0_0_20px_rgba(34,211,238,0.25)] text-cyan-400"
     },
@@ -21,7 +32,7 @@ const Projects = () => {
         "Poker Card Generator – A fun and interactive poker card generator built with HTML, CSS, and JavaScript. It randomly displays a poker card on each page load. DOM manipulation, dynamic UI updates, and responsive front-end design.",
       github: "https://github.com/dilorom/PokerCardGenerator", // Note: Ensure this link is updated later if needed!
       demo: "https://github.com/dilorom/PokerCardGenerator", 
-      image: "public/poker.webp",
+      image: "poker.webp",
       // Purple Glow Theme
       glowStyles: "border-purple-500/20 hover:border-purple-400 hover:shadow-[0_0_20px_rgba(192,132,252,0.25)] text-purple-400"
     },
