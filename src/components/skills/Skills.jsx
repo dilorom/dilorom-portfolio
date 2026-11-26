@@ -2,6 +2,7 @@ import React from "react";
 import SectionWrapper from "../ui/SectionWrapper";
 import AnimatedText from "../ui/AnimatedText";
 import SkillIcon from "./SkillIcon";
+import { SiTypescript } from "react-icons/si";
 import {
   FaHtml5,
   FaCss3Alt,
@@ -30,6 +31,11 @@ const Skills = () => {
       icon: FaJsSquare, 
       label: "JavaScript", 
       glowStyles: "border-pink-500/20 text-pink-400 hover:border-pink-400 hover:shadow-[0_0_15px_rgba(244,63,94,0.3)]" 
+    },
+    { 
+      icon: SiTypescript, 
+      label: "TypeScript", 
+      glowStyles: "border-sky-500/20 text-sky-400 hover:border-sky-400 hover:shadow-[0_0_15px_rgba(56,189,248,0.3)]" 
     },
     { 
       icon: FaReact, 
