@@ -1,16 +1,51 @@
-# React + Vite
+# Dilorom Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+My personal portfolio website, built with React, TypeScript and Vite.
 
-Currently, two official plugins are available:
+🔗 **Live site:** https://dilorom.github.io/dilorom-portfolio/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Tech Stack
 
-## React Compiler
+- **Frontend:** React 19, TypeScript, Vite
+- **Styling:** Tailwind CSS, Framer Motion
+- **Backend:** Node.js, Express (`backend/server.js`)
+- **Other:** EmailJS for the contact form, React Hot Toast, React Icons
+- **Deployment:** GitHub Pages
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Projects Featured
 
-## Expanding the ESLint configuration
+- **Football Performance Dashboard:** Python, Streamlit, pandas, Plotly, SQLite
+- **Movie App:** React and the TMDB API
+- **GoDrive:** a cloud storage web app
+- **Poker Card Generator:** HTML, CSS, JavaScript
+- **Caesar Cipher:** a message encryption tool
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## TypeScript
+
+The project uses TypeScript with `strict` mode. Shared types live in `src/types.ts`. For example, the `Project` type is used by both the `Projects` list and the `ProjectCard` component.
+
+To type-check the project:
+
+    npx tsc
+
+## Getting Started
+
+    npm install
+    npm run dev
+
+Open http://localhost:5173/dilorom-portfolio/
+
+## Scripts
+
+| Command | What it does |
+|---|---|
+| `npm run dev` | Start the development server |
+| `npm run build` | Build for production |
+| `npm run preview` | Preview the production build |
+| `npm run lint` | Run ESLint |
+| `npm run deploy` | Build and deploy to GitHub Pages |
+| `npm run server` | Start the Node.js backend |
+
+## Contact
+
+GitHub: [@dilorom](https://github.com/dilorom)

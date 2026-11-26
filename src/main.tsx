@@ -5,7 +5,7 @@ import "./styles/globals.css";
 import "./styles/glow.css"; // 🔥 Glow animation
 
 
-ReactDOM.createRoot(document.getElementById("root")).render(
+ReactDOM.createRoot(document.getElementById("root")!).render(
   <React.StrictMode>
     <App />
   </React.StrictMode>

@@ -1,6 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 import { FaGithub } from "react-icons/fa";
+import type { Project } from "../../types";
 
 const ProjectCard = ({
   title,
@@ -9,7 +10,7 @@ const ProjectCard = ({
   demo,
   image,
   glowStyles, 
-}) => {
+}: Project) => {
   return (
     <motion.a
       href={demo || github}
